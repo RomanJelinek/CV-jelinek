@@ -12,23 +12,23 @@
 }
 
 .pointerChildhood {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/detstvi.png");
+  background-image: url("/src/img/detstvi.png");
 }
 
 .pointerHighSchool {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/prumka.png");
+  background-image: url("/src/img/prumka.png");
 }
 
 .pointerUniversity {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/vysoka.png");
+  background-image: url("/src/img/vysoka.png");
 }
 
 .pointerMarketing {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/marketing.png");
+  background-image: url("/src/img/marketing.png");
 }
 
 .pointerNow {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/soucasnost.png");
+  background-image: url("/src/img/soucasnost.png");
 }
 
 h3 {
@@ -36,20 +36,20 @@ h3 {
 }
 
 .area {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaBackground.png");
+  background-image: url("/src/img/AreaBackground.png");
   width: 50px;
   height: 850px;
   margin: 0 auto;
 }
 
 .areaHorizontal {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaHorizontalBackground.png");
+  background-image: url("/src/img/AreaHorizontalBackground.png");
   width: 150px;
   height: 50px;
 }
 
 .areaHorizontalFinish {
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaHorizontalBackgroundFinish.png");
+  background-image: url("/src/img/AreaHorizontalBackgroundFinish.png");
   width: 150px;
   height: 50px;
 }
@@ -57,7 +57,7 @@ h3 {
 .event1 {
   width: 50px;
   height: 50px;
-  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/mushroom.png");
+  background-image: url("/src/img/mushroom.png");
   margin-top: 200%;
   position: sticky;
   z-index: 1;

@@ -6,7 +6,7 @@ body {
 }
 
 .backgroundLight {
-    background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/background1.jpg");
+    background-image: url("/src/img/background1.jpg");
     background-position: 50% 0;
 
 
@@ -15,7 +15,7 @@ body {
 
 
 .backgroundDark {
-    background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/background1Night.jpg");
+    background-image: url("/src/img/background1Night.jpg");
     background-position: 50% 0;
 
 }
