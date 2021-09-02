@@ -1,0 +1,24 @@
+.welcomeModalContent {
+  text-align: center;
+  color: wheat;
+  line-height: 1.4;
+}
+
+.welcomeModalContent button {
+  font-family: "Press Start 2p";
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 5px 10px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2em;
+  background-color: lightgray;
+  text-shadow: -1px -1px black, 1px 1px white;
+  color: gray;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0.2em gray;
+  cursor: pointer;
+}

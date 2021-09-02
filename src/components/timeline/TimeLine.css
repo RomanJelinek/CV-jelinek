@@ -1,0 +1,152 @@
+.timeline {
+  padding-top: 110px;
+  padding-bottom: 200px;
+}
+
+.pointer {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.pointerChildhood {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/detstvi.png");
+}
+
+.pointerHighSchool {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/prumka.png");
+}
+
+.pointerUniversity {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/vysoka.png");
+}
+
+.pointerMarketing {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/marketing.png");
+}
+
+.pointerNow {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/soucasnost.png");
+}
+
+h3 {
+  text-align: center;
+}
+
+.area {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaBackground.png");
+  width: 50px;
+  height: 850px;
+  margin: 0 auto;
+}
+
+.areaHorizontal {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaHorizontalBackground.png");
+  width: 150px;
+  height: 50px;
+}
+
+.areaHorizontalFinish {
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/AreaHorizontalBackgroundFinish.png");
+  width: 150px;
+  height: 50px;
+}
+
+.event1 {
+  width: 50px;
+  height: 50px;
+  background-image: url("file:///Users/romanjelinek/Desktop/my-personal-website/src/img/mushroom.png");
+  margin-top: 200%;
+  position: sticky;
+  z-index: 1;
+}
+
+.eventPickedUp {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  margin-top: 200%;
+  position: sticky;
+}
+
+.textRight {
+  color: wheat;
+  width: 350px;
+  position: absolute;
+  margin-left: 80px;
+  font-size: large;
+  font-weight: 400;
+  background: #3e2607;
+  padding: 10px;
+  line-height: 1.4;
+}
+
+.textLeft {
+  color: wheat;
+  width: 350px;
+  position: absolute;
+  margin-left: -380px;
+  font-size: large;
+  font-weight: 400;
+  padding: 10px;
+  line-height: 1.4;
+  background: #3e2607;
+}
+
+.prumyslovka {
+  max-width: 100px;
+}
+
+/* MOBILNÍ */
+
+@media only screen and (max-width: 1000px) {
+  .textLeft {
+    width: 200%;
+    margin-left: -230%;
+  }
+
+  .textRight {
+    width: 200%;
+    margin-left: 140%;
+  }
+  .prumyslovka {
+    max-width: 50px;
+  }
+
+  .arrowUp {
+    position: relative;
+    bottom: 50%;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid rgb(233, 230, 46);
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .arrowDown {
+    position: relative;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid rgb(233, 230, 46);
+    cursor: pointer;
+    z-index: 100;
+  }
+  .textRight {
+    color: white;
+    width: 250px;
+    margin-left: 80px;
+  }
+
+  .textLeft {
+    color: white;
+    width: 250px;
+    margin-left: -280px;
+  }
+}
