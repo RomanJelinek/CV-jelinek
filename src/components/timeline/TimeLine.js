@@ -13,6 +13,7 @@ const hideWelcomeModal = () => {
 setWelcomeModal (false)
 }
  
+
     return (
       <>
         {welcomeModal && <WelcomeModal hideWelcomeModal={hideWelcomeModal} />}
