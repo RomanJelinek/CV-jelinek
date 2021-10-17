@@ -14,8 +14,10 @@ import useSound from "use-sound";
 
 const events = [150, 300, 450, 600, 750];
 
-const PointerArea = () => {
+const PointerArea = (props) => {
   const [pointer, setPointer] = useState(0);
+  const [pointerHorizontally, setPointerHorizontally] = useState(50);
+  const [mushroom, DeleteMushroom] = useState()
   const darkMode = useContext(SwitchViewContext);
   const [playLvlUp] = useSound(lvlUp);
 
@@ -32,12 +34,17 @@ const PointerArea = () => {
     setPointer(position);
   };
 
+   const pointerPositionHorizontal = (positionHorizontal) => {
+     console.log(positionHorizontal)
+     setPointerHorizontally(positionHorizontal)
+   };
+
  
   return (
     <div className="timeline">
       <div className={"area"}>
         <div className="areaHorizontal"></div>
-        <Pointer whereIsPointer={pointerPosition} />
+        <Pointer whereIsPointer={pointerPosition} whereisPointerHorizontally={pointerPositionHorizontal} />
         {pointer < events[0] ? (
           <Event1 />
         ) : (

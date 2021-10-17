@@ -59,6 +59,8 @@ Portal()
       setPointerPositionHorizontal(PointerPositionHorizontal - 50);
   
   };
+  console.log(PointerPositionHorizontal)
+  console.log(PointerPositionVertical)
 
 
   return (
@@ -75,9 +77,9 @@ Portal()
           left: PointerPositionVertical + "px",
         }}
       >
-        <div className={"arrowDown"} onClick={arrowDown}></div>
-        <div className={"arrowLeft"} onClick={arrowLeft}></div>
-        <div className={"arrowRight"} onClick={arrowRight}></div>
+        {PointerPositionVertical === 0 && PointerPositionHorizontal !== 800 && <div className={"arrowDown"} onClick={arrowDown}></div>}
+        {PointerPositionVertical !== 0 && PointerPositionHorizontal !== 800 && <div className={"arrowLeft"} onClick={arrowLeft}></div>}
+        {PointerPositionHorizontal === 800 && <div className={"arrowRight"} onClick={arrowRight}></div>}
       </div>
     </div>
   );
