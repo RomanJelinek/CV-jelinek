@@ -42,6 +42,14 @@ Portal()
 
  
 
+  const arrowLeft = () => {
+       setPointerPositionVertical(PointerPositionVertical - 50);
+     };
+
+  const arrowRight = () => {
+        setPointerPositionVertical(PointerPositionVertical + 50);
+      };
+
   const arrowDown = () => {
     setPointerPositionHorizontal(PointerPositionHorizontal + 50);
   };
@@ -69,6 +77,8 @@ Portal()
       >
         <div className={"arrowUp"} onClick={arrowUp}></div>
         <div className={"arrowDown"} onClick={arrowDown}></div>
+        <div className={"arrowLeft"} onClick={arrowLeft}></div>
+        <div className={"arrowRight"} onClick={arrowRight}></div>
       </div>
     </div>
   );

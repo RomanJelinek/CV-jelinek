@@ -138,6 +138,32 @@ h3 {
     cursor: pointer;
     z-index: 100;
   }
+
+  .arrowRight {
+    position: relative;
+    top: -200%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid rgb(233, 230, 46);
+    cursor: pointer;
+    z-index: 100;
+  }
+  .arrowLeft {
+    position: relative;
+    top: -100%;
+    left: -50%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid rgb(233, 230, 46);
+    cursor: pointer;
+    z-index: 100;
+  }
+
   .textRight {
     color: white;
     width: 250px;
