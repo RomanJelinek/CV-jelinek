@@ -55,9 +55,9 @@ Portal()
   };
 
   const arrowUp = () => {
-    if (PointerPositionHorizontal >= 1) {
+   
       setPointerPositionHorizontal(PointerPositionHorizontal - 50);
-    }
+  
   };
 
 
