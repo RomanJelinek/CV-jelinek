@@ -26,3 +26,9 @@ background: #3E2607;
  z-index: 991;
  border-radius: 30px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .modalOverlay {
+   font-size: smaller;
+  }
+}
