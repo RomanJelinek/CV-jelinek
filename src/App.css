@@ -8,7 +8,7 @@ body {
 .backgroundLight {
     background-image: url("/src/img/background1.jpg");
     background-position: 50% 0;
-
+    height: 100%;
 
 }
 

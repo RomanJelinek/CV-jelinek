@@ -169,12 +169,16 @@ h3 {
   .textRight {
     color: white;
     width: 250px;
-    margin-left: 80px;
+    margin-left: -20%;
+    margin-top: 7%;
+    z-index: 1000;
   }
 
   .textLeft {
     color: white;
     width: 250px;
-    margin-left: -280px;
+    margin-left: -20%;
+    margin-top: -90%;
+    z-index: 1000;
   }
 }

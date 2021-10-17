@@ -46,7 +46,7 @@ const PointerArea = () => {
         {events[0] === pointer && (
           <TextRight
             text={
-              "V roce 2012 jsem vystudoval střední průmyslovou školu v Písku "
+              "V roce 2012 jsem vystudoval střední průmyslovou školu v Písku, kde jsem poprvé přišel do styku s programováním. Nicméně tehdy mě to ještě nechytlo. "
             }
             img={prumyslovka}
           />
@@ -56,17 +56,16 @@ const PointerArea = () => {
         ) : (
           <EventPickedUp events={events} pointer={pointer} />
         )}
-        {events[1] === pointer && <TextLeft />}
+        {events[1] === pointer && <TextRight text={"Po střední škole jsem se tedy rozhodl, že nastoupím na Vysokou školu Technickou a Ekonomickou v Českých Budějovicích, kde jsem vystudoval marketing."} />}
         {pointer < events[2] ? (
           <Event1 />
         ) : (
           <EventPickedUp events={events} pointer={pointer} />
         )}
         {events[2] === pointer && (
-          <TextRight
+          <TextLeft
             text={
-              "Po vysoké škole jsem se přestěhoval do Prahy, kde jsem začal pracovat jako broker"
-            }
+              "Po vysoké škole jsem se přestěhoval do Prahy, kde jsem absolvoval kurz online marketingu a začal pracovat pro agenturu Visibility Digital."}
           />
         )}
         {pointer < events[3] ? (
@@ -74,7 +73,8 @@ const PointerArea = () => {
         ) : (
           <EventPickedUp events={events} pointer={pointer} />
         )}
-        {events[3] === pointer && <TextLeft />}
+        {events[3] === pointer && <TextLeft 
+        text={"Po 5 letech práce jakožto online marketingový specialista jsem se rozhodl, že se naučím programovat. Začal jsem se tedy učit javascript."}/>}
         {pointer < events[4] ? (
           <Event1 />
         ) : (
@@ -85,7 +85,7 @@ const PointerArea = () => {
         {events[4] === pointer && (
           <TextLeft
             text={
-              "Po vysoké škole jsem se přestěhoval do Prahy, kde jsem začal pracovat jako broker"
+              "Po vstřebání Vanilla JS jsem se rozhodl, směřovat svou pozornost na React, ve kterém je naprogramována tato timeline :)"
             }
           />
         )}
