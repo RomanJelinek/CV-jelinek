@@ -130,8 +130,8 @@ h3 {
 
   .arrowDown {
     position: relative;
-    top: 95%;
-    left: 15%;
+    top: 120%;
+    left: 18%;
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
@@ -143,7 +143,7 @@ h3 {
 
   .arrowRight {
     position: relative;
-    top: -100%;
+    top: -70%;
     left: 130%;
     width: 0;
     height: 0;
@@ -155,8 +155,8 @@ h3 {
   }
   .arrowLeft {
     position: relative;
-    top: -40%;
-    left: -60%;
+    top: -10%;
+    left: -55%;
     width: 0;
     height: 0;
     border-top: 15px solid transparent;

@@ -75,7 +75,6 @@ Portal()
           left: PointerPositionVertical + "px",
         }}
       >
-        <div className={"arrowUp"} onClick={arrowUp}></div>
         <div className={"arrowDown"} onClick={arrowDown}></div>
         <div className={"arrowLeft"} onClick={arrowLeft}></div>
         <div className={"arrowRight"} onClick={arrowRight}></div>
