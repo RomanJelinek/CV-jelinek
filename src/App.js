@@ -25,6 +25,7 @@ function App() {
         <div className={darkMode ? "backgroundDark" : "backgroundLight"}>
           <Switch getSwitch={onSwitch} />
           <TimeLine />
+          test
         </div>
       </SwitchViewProvider>
     </>
