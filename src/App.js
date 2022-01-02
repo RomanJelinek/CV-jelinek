@@ -12,7 +12,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/timeline" element={<Game />} />
+        <Route path="/timeline/" element={<Game />} />
       </Routes>
     </Router>
   );
