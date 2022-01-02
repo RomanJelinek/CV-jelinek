@@ -1,7 +1,7 @@
 
 import Game from "./components/Game"
 import Homepage from "./homepage/Homepage"
-import Navmenu from "./navbar/Navmenu"
+import Navbar from "./navbar/Navbar"
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <Router>
-      <Navmenu/>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/timeline" element={<Game />} />
