@@ -1,0 +1,293 @@
+/* CV */
+.cv-color-options {
+   width: 100vMin;
+   margin: 4vMin auto 0 auto;
+   display: block;
+   text-align: center;
+}
+.cv-one-color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cv-pick-layouts {
+   width: 100vMin;
+   margin: 2vMin auto 4vMin auto;
+   display: block;
+   text-align: center;
+}
+
+.cv-pick-one-layout {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    border-radius: 50%;
+}
+
+.cv-layout-one {
+    background-image: url("../../img/layout-first.svg");
+    background-position: center;
+}
+
+.cv-layout-two {
+    background-image: url("../../img/layout-second.svg");
+}
+
+.cv-container {
+    height: 167.7vMin;
+    width: 130vMin;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.cv-right-container {
+    width: 93.6vMin;
+}
+
+.cv-right-container h2 {
+ text-align: center;
+ font-size: 4.55vMin;
+ margin: 2.6vMin 0 2.6vMin 0;
+}
+
+.cv-right-container h3 {
+ text-align: left;
+ font-size: 3.25vMin;
+ margin: 0 0 0 2.6vMin;
+}
+
+.cv-right-container p {
+ text-align: justify;
+ font-size: 2.6vMin;
+ margin: 1.3vMin 5.2vMin 2.6vMin 2.6vMin;
+}
+
+/* CV Main */
+
+.cv-main-container {
+    padding-top: 2.6vMin;
+    background-color: black;
+    width: 36.4vMin;
+    height: 165.1vMin;
+    color: white;
+    display: inline-block;
+}
+
+.cv-main-profile-picture {
+    width: 24.7vMin;
+    height: 24.7vMin;
+    background-image: url("/src/img/profilePhoto.jpeg");
+    background-size:cover;
+    border: 0.5vMin solid grey;
+    border-radius: 50%;
+    margin: 2.6vMin auto;
+}
+
+.cv-main-basic {
+    margin: 2.6vMin;;
+}
+
+.cv-main-basic a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2.34vMin;
+    line-height: 4.68vMin;
+    margin-top: 1.95vMin;
+    border-bottom: 1.3px solid grey;
+    text-align: center;
+}
+
+.cv-main-name {
+    font-size: 6.24vMin;
+    text-align: center;
+    margin: 0 auto 5.2vMin auto;
+}
+
+
+.cv-main-skills {
+    margin: 6.5vMin 0 0 1.95vMin
+}
+
+.cv-main-skills li{
+    list-style: none;
+    margin-right: 1.3vMin;
+    font-size: 6.5vMin;
+    display: inline-block;
+}
+
+.cv-main-signature {
+    position: absolute;
+    bottom: 2vMin;
+    font-size: 2vMin;
+    font-style: italic;
+}
+
+.cv-main-story {
+    text-align: justify;
+    margin: 2.6vMin;
+    line-height: 3.12vMin;
+    font-size: 2.47vMin;
+}
+
+
+
+/*  end of CV Main */
+
+/* CV experience container */
+
+.cv-experience-container {
+
+}
+
+
+
+
+
+
+/****** copy ******/
+
+
+@media only screen and (max-width: 1000px) {
+
+/* CV */
+
+.cv-one-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.cv-options {
+   width: 100vMin;
+   margin: 5vMin auto;
+   display: block;
+   text-align: center;
+}
+
+.cv-container {
+    height: 129vMin;
+    width: 100vMin;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+}
+
+.cv-right-container {
+    width: 72vMin;
+}
+
+.cv-right-container h2 {
+ text-align: center;
+ font-size: 3.5vMin;
+ margin: 2vMin 0 2vMin 0;
+}
+
+.cv-right-container h3 {
+ text-align: left;
+ font-size: 2.5vMin;
+ margin: 0 0 0 2vMin;
+}
+
+.cv-right-container p {
+ text-align: justify;
+ font-size: 2vMin;
+ margin: 1vMin 4vMin 2vMin 2vMin;
+}
+
+/* CV Main */
+
+.cv-main-container {
+    padding-top: 2vMin;
+    background-color: black;
+    width: 28vMin;
+    height: 127vMin;
+    color: white;
+    display: inline-block;
+}
+
+.cv-main-profile-picture {
+    width: 19vMin;
+    height: 19vMin;
+    background-image: url("/src/img/profilePhoto.jpeg");
+    background-size:cover;
+    border: 3px solid grey;
+    border-radius: 50%;
+    margin: 2vMin auto;
+}
+
+.cv-main-basic {
+    margin: 2vMin;;
+}
+
+.cv-main-basic a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.8vMin;
+    line-height: 3.6vMin;
+    margin-top: 1.5vMin;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+
+.cv-main-name {
+    font-size: 4.8vMin;
+    text-align: center;
+    margin: 0 auto 4vMin auto;
+}
+
+
+.cv-main-skills {
+    margin: 5vMin 0 0 1.5vMin
+}
+
+.cv-main-skills li{
+    list-style: none;
+    margin-right: 1vMin;
+    font-size: 5vMin;
+    display: inline-block;
+}
+
+.cv-main-signature {
+    position: absolute;
+    bottom: 1vMin;
+    right: 1vMin;
+    font-style: italic;
+}
+
+.cv-main-story {
+    text-align: justify;
+    margin: 2vMin;
+    line-height: 2.4vMin;
+    font-size: 1.9vMin;
+}
+
+
+
+/*  end of CV Main */
+
+/* CV experience container */
+
+.cv-experience-container {
+
+}
+
+
+}

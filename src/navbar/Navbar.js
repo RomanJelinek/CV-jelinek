@@ -25,9 +25,20 @@ function Navbar() {
     <nav>
       {(toggleMenu || screenWidth > 500) && (
         <ul className="list">
-          <li className="items"><a href="/">Home</a></li>
+          <li className="items">
+            <a href="/">Home</a>
+          </li>
+          <li className="items">
+            <a href="/timeline">experience</a>
+          </li>
+          <li className="items">
+            <a href="/timeline">Skill set</a>
+          </li>
           <li className="items">
             <a href="/timeline">Timeline</a>
+          </li>
+          <li className="items">
+            <a href="/timeline">Contact</a>
           </li>
         </ul>
       )}

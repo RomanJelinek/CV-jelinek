@@ -3,12 +3,10 @@ nav {
     top: 0;
     width: 100%;
     height: 40px;
-    background: midnightblue;
 }
 
 .list {
     list-style-type: none;
-    background: midnightblue;
     height: 100%;
     display: flex;
     justify-content: right;

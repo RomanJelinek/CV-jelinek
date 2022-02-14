@@ -1,0 +1,85 @@
+.chatbot-container {
+    text-align: center;
+    width: 65%;
+    margin: 50px auto 0 auto;
+    height: 1000px;
+    word-spacing: 2px;
+    line-height: 2.2em;
+}
+
+.chatbot-text-to-show {
+    color: white;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.chatbot-text-to-show li {
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.chatbot-input-name {
+    display: block;
+    width: 50%;
+    margin: 0 auto 20px auto;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+}
+
+.chatbot-container button {
+    background-color: #13ad20;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 30px;
+    cursor: pointer;
+}
+
+.chatbot-checkboxes {
+    color: white;
+    list-style: none;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    font-size: 1.2em;
+
+}
+
+.chatbot-checkboxes input{
+    margin-right: 10px;
+    transition: box-shadow .3s;
+    background: lightgrey;
+    width: 30px;
+    height: 30px;
+    background: rgba(40,40,40,0.5);
+    color:black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.chatbot-checkboxes input:checked { 
+     background: rgba(255, 255, 255, 1);
+}
+
+.chatbot-checkboxes-label {
+    position: absolute;
+    bottom: 9px;
+    color: rgb(223, 219, 219);
+}
+
+.chatbox-name-alert {
+    font-weight: bold;
+    padding: 5px;
+    background: #e6ff00;
+    margin-bottom: 15px;
+}
