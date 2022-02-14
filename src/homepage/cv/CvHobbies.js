@@ -4,7 +4,7 @@ const cvHobbies = (props) => {
     return (
     <>
         <h2 style={{color: props.selectedColor === "white" ? "black" : props.selectedColor}}>Hobbies</h2>
-        <p>This is the web app that wasn't made by me. I mention this website as a reference because I learnt a lot throught ori </p>
+        <p>Appart of coding I really like to cook good stuff. When I have time I try to sport a bit. In the summer we are expecting a son with my wife so I guess there is another hobby coming :)</p>
     </>
     );
 };
