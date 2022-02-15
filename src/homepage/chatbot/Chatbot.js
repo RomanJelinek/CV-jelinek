@@ -46,6 +46,7 @@ const Chatbot = (props) => {
   ]
 
   const messages = [""];
+  
 
   const [textToShow, setTextToShow] = useState(
     "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer ( junior ). In the following steps you will generate a CV. Let's set it up!"
@@ -198,7 +199,7 @@ const Chatbot = (props) => {
             <li className="chatbot-checkboxes"> <input type="checkbox" onChange={handleFormCv} id={cvItem.id} name={cvItem.id} value={cvItem.id}/><label className="chatbot-checkboxes-label" for={cvItem.id}>{cvItem.text}</label></li>
           )
         })}</>}
-      {(!companyName && currentLevel > 1) && (<button onClick={() => {handleMessages("answer1")}}>{buttonText1}</button>)}
+      {((!companyName && currentLevel > 1) || (currentLevel > 1)) && (<button onClick={() => {handleMessages("answer1")}}>{buttonText1}</button>)}
       {currentLevel !== 2 && currentLevel !== 3 && (<button onClick={() => {handleMessages("answer2")}}>{buttonText2}</button>)}</div>
       )
       
