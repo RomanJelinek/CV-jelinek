@@ -40,7 +40,7 @@ const Chatbot = (props) => {
 
   const checkBoxValues = [
     {id: "CvEducation", text: "Education", isChecked: false},
-    {id: "CvExperience", text: "Web development experience", isChecked: false},
+    {id: "CvExperience", text: "Web development", isChecked: false},
     {id: "CvOtherExperience", text: "Other experience", isChecked: false},
     {id: "CvHobbies", text: "Hobbies", isChecked: false},
   ]
