@@ -48,7 +48,7 @@ const Chatbot = (props) => {
   const messages = [""];
 
   const [textToShow, setTextToShow] = useState(
-    "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer ( junior ). In the following steps you will be generating the CV which I am going to try make as organized as possible. Let's set it up!"
+    "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer ( junior ). In the following steps you will generate a CV. Let's set it up!"
   );
   const [buttonText1, setButtonText1] = useState("I want to make a website");
   const [buttonText2, setButtonText2] = useState("Continue");
