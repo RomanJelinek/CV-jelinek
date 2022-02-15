@@ -11,7 +11,22 @@ const [cvItems, setCvItems] = useState([])
 const [showChatbot, setShowChatbot] = useState(true)
 const [userInfo, setUserInfo] = useState([])
 const [cvColor, setCvColor] = useState([])
+const [isMobile, setIsMobile] = useState(false);
 
+//choose the screen size
+const handleResize = () => {
+  if (window.innerWidth < 720) {
+    setIsMobile(true);
+  } else {
+    setIsMobile(false);
+  }
+};
+
+
+// create an event listener
+useEffect(() => {
+  window.addEventListener("resize", handleResize);
+},[]);
 
 // getting chatbot data from local storage
 useEffect(() => {
@@ -27,7 +42,7 @@ useEffect(() => {
     userObject.company = user.company;
     setUserInfo(userObject);
   }
-}, [showChatbot, []]); // I am setting this state in the Chatbot.js component
+}, [showChatbot]); // I am setting this state in the Chatbot.js component
 
 
 // Preparing a download button (copied code)
@@ -67,19 +82,21 @@ useEffect(() => {
       window.open(uri);
     }
   }
-
-  console.log(cvColor)
-
 }, [])
 ///////  
 
     return (
       <div className="homepage">
-        <p className="homepage-top-text">{userInfo.userName}, bellow, you will find my CV which you can print with the button bellow the CV.</p>
         {showChatbot && <Chatbot liftData={liftData}/>}
-         {!showChatbot && <CV userInfo={userInfo} liftColor={liftColor}/>}
-         <div id="download-cv" style={{backgroundColor: (cvColor.length === 0 || cvColor === "white") ? "black" : cvColor, color: "white"}}>Download CV to print</div> 
-        </div>
+
+        {!showChatbot && <> <p className="homepage-top-text">{userInfo.userName}, you will find my CV bellow.</p>
+        {!isMobile && <p className="homepage-top-text">If you want, you can print it with the button on the bottom of the page.</p>}
+         <CV userInfo={userInfo} cvItems={cvItems} liftColor={liftColor}/> 
+        </>}
+        <div id="download-cv" style={{backgroundColor: (cvColor.length === 0 || cvColor === "white") ? "black" : cvColor, color: "white", visibility: !showChatbot ? "visible" : "hidden"}}>
+          {!isMobile ? <>Download CV to print</> : <>If you want to download the CV, please open the site on desktop</>}
+        </div>         
+      </div>
     );
 };
 

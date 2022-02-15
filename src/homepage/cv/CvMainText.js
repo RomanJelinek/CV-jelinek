@@ -21,14 +21,12 @@ const CvMainText = (props) => {
             href="tel:731-799-162"
             style={{ color: props.selectedColor === "white" && "black" }}
           >
-            {" "}
             +420 731 799 162
           </a>
           <a
             href="mailto:roman.jelinek91@gmail.com"
             style={{ color: props.selectedColor === "white" && "black" }}
           >
-            {" "}
             roman.jelinek91@gmail.com
           </a>
           <a
@@ -39,24 +37,12 @@ const CvMainText = (props) => {
           </a>
         </div>
         <div className="cv-main-skills">
-          <li>
-            <IoLogoHtml5 />
-          </li>
-          <li>
-            <IoLogoCss3 />
-          </li>
-          <li>
-            <IoLogoJavascript />
-          </li>
-          <li>
-            <GrReactjs />
-          </li>
-          <li>
-            <GrGithub />
-          </li>
-          <li>
-            <SiFirebase />{" "}
-          </li>
+          <li><IoLogoHtml5 /></li>
+          <li><IoLogoCss3 /></li>
+          <li><IoLogoJavascript /></li>
+          <li><GrReactjs /></li>
+          <li><GrGithub /></li>
+          <li><SiFirebase /></li>
         </div>
         <div className="cv-main-story">
           <p>

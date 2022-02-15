@@ -21,7 +21,6 @@ const CV = (props) => {
         props.liftColor(color)
     }
 
-    console.log(props.userInfo)
 
     return (
       <>
@@ -67,10 +66,10 @@ const CV = (props) => {
             />
           )}
           <div className="cv-right-container">
-            <CvExperience selectedColor={selectedColor} />
-            <CvOtherExperience selectedColor={selectedColor} />
-            <CvEducation selectedColor={selectedColor} />
-            <CvHobbies selectedColor={selectedColor} />
+            {props.cvItems.includes("CvExperience") && <CvExperience selectedColor={selectedColor} />}
+            {props.cvItems.includes("CvOtherExperience") &&<CvOtherExperience selectedColor={selectedColor} />}
+            {props.cvItems.includes("CvEducation") &&<CvEducation selectedColor={selectedColor} />}
+            {props.cvItems.includes("CvHobbies") &&<CvHobbies selectedColor={selectedColor} />}
           </div>
           {selectedLayout === "right" && (
             <CvMainText

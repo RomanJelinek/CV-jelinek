@@ -67,6 +67,14 @@
  margin: 0 0 0 2.6vMin;
 }
 
+.cv-right-container a {
+ text-align: left;
+ font-size: 1.5vMin;
+ margin: 1.3vMin 5.2vMin 2.6vMin 2.6vMin;
+ text-decoration: none;
+ color: black;
+}
+
 .cv-right-container p {
  text-align: justify;
  font-size: 2.3vMin;
@@ -130,7 +138,7 @@
 .cv-main-signature {
     position: absolute;
     bottom: 2vMin;
-    font-size: 2vMin;
+    font-size: 1.5vMin;
     font-style: italic;
 }
 
@@ -151,13 +159,7 @@
 
 }
 
-
-
-
-
-
 /****** copy ******/
-
 
 @media only screen and (max-width: 1000px) {
 
@@ -201,14 +203,21 @@
 
 .cv-right-container h3 {
  text-align: left;
- font-size: 2.5vMin;
+ font-size: 2.2vMin;
  margin: 0 0 0 2vMin;
+}
+
+.cv-right-container a {
+ text-align: left;
+ font-size: 1vMin;
+ text-decoration: none;
+ color: black;
 }
 
 .cv-right-container p {
  text-align: justify;
  font-size: 1.8vMin;
- margin: 1vMin 4vMin 2vMin 2vMin;
+ margin: 1vMin 3vMin 1vMin 2vMin;
 }
 
 /* CV Main */
@@ -269,6 +278,7 @@
     position: absolute;
     bottom: 1vMin;
     right: 1vMin;
+    font-size: 0.9vMin;
     font-style: italic;
 }
 

@@ -26,8 +26,8 @@ const Chatbot = (props) => {
         "Alright! The CV is almost ready. Bellow you will find your chosen parts of the CV and also your last interaction. Woud you like to generate CV also for print?",
       branch: "hire",
       step: 3,
-      buttonText1: "Yes I would like a print Version",
-      buttonText2: "No I don't need a print version",
+      buttonText1: "I want to adjust CV sections",
+      buttonText2: "Generate CV",
     },
     {
       message: "Hire step 3",
@@ -39,11 +39,10 @@ const Chatbot = (props) => {
   ];
 
   const checkBoxValues = [
-    {id: "openingText", text: "Opening text (not everyone is interested in that I guess)", isChecked: false},
-    {id: "education", text: "Education", isChecked: false},
-    {id: "onlineMarketing", text: "Previous experience as an online marketing specialist", isChecked: false},
-    {id: "react", text: "Projects made in React with description", isChecked: false},
-    {id: "hobbies", text: "Hobbies", isChecked: false},
+    {id: "CvEducation", text: "Education", isChecked: false},
+    {id: "CvExperience", text: "Web development experience", isChecked: false},
+    {id: "CvOtherExperience", text: "Other experience", isChecked: false},
+    {id: "CvHobbies", text: "Hobbies", isChecked: false},
   ]
 
   const messages = [""];
@@ -60,7 +59,6 @@ const Chatbot = (props) => {
   const [companyName, setCompanyName] = useState("")
   const [checkBoxes, setCheckBoxes] = useState(checkBoxValues)
   const [myAge, setMyAge] = useState(1)
-  const [printVersion, setPrintVersion] = useState(true)
 
 
   // Getting a company name from URL (UTM Parameter)
@@ -143,18 +141,18 @@ const Chatbot = (props) => {
         window.localStorage.setItem("userData", JSON.stringify(dataToSend)); // sending all needed data to local storage 
         props.liftData(false) // updating state in order to close this element 
       }
-      //////
+      //////////
 
       findMessage();
     }
   }
 
 
-// getting name from form
-  const handleName = (e) => {
-    setUserName(e.target.value);
-  };
-/////  
+  // getting name from form
+    const handleName = (e) => {
+      setUserName(e.target.value);
+    };
+  /////  
 
 
   // handle items for generating CV //
@@ -167,22 +165,32 @@ const Chatbot = (props) => {
     setCheckBoxes(arrayCopy)
    }
    ///////
-  
 
   return (
     <div className="chatbot-container">
+
       <div className="chatbot-text-to-show">{textToShow}
-      {currentLevel === 4 && currentBranch === "hire" && checkBoxes.map((item) => {
-          if (item.isChecked)
-         return <li>{item.text}</li>;
-        })}</div>
+      {currentLevel === 4 && currentBranch === "hire" && 
+      <>
+        <li>Basic information</li>
+        {checkBoxes.map((item) => {
+            if (item.isChecked)
+          return <li>{item.text}</li>;
+          })}
+      </>
+      }
+      
+      </div>
+
       {currentLevel === 2 && <>{nameAlert && <div className="chatbox-name-alert">Please fill your name in</div>}<input className="chatbot-input-name" placeholder="Type your name" onChange={handleName}></input></>}
-       {currentLevel === 3 && <> {checkBoxes.map((cvItem) => {
+       {currentLevel === 3 && <> 
+        <li className="chatbot-checkboxes"> <input checked type="checkbox" id="CvMainText"/><label className="chatbot-checkboxes-label" for="CvMainText">Basic information</label></li>
+       {checkBoxes.map((cvItem) => {
           return (
             <li className="chatbot-checkboxes"> <input type="checkbox" onChange={handleFormCv} id={cvItem.id} name={cvItem.id} value={cvItem.id}/><label className="chatbot-checkboxes-label" for={cvItem.id}>{cvItem.text}</label></li>
           )
         })}</>}
-      {(!companyName || currentLevel > 1) && (<button onClick={() => {handleMessages("answer1")}}>{buttonText1}</button>)}
+      {(!companyName && currentLevel > 1) && (<button onClick={() => {handleMessages("answer1")}}>{buttonText1}</button>)}
       {currentLevel !== 2 && currentLevel !== 3 && (<button onClick={() => {handleMessages("answer2")}}>{buttonText2}</button>)}</div>
       )
       
