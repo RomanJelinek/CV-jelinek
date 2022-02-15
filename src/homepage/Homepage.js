@@ -48,11 +48,17 @@ useEffect(() => {
 // Preparing a download button (copied code)
 const liftData = (data) => {
   setShowChatbot(data)
+  
 }
 
 const liftColor = (color) => {
   setCvColor(color);
 };
+
+const resetDataHandler = () => {
+  localStorage.clear();
+  window.location.reload();
+}
 
 useEffect(() => {
   document.getElementById("download-cv").addEventListener("click", function () {
@@ -86,10 +92,17 @@ useEffect(() => {
 ///////  
 
     return (
+      <>
       <div className="homepage">
+      
         {showChatbot && <Chatbot liftData={liftData}/>}
-
-        {!showChatbot && <> <p className="homepage-top-text">{userInfo.userName}, you will find my CV bellow.</p>
+        {!showChatbot && 
+        <> 
+        <div className="top-links">
+          <a onClick={resetDataHandler}>Reset CV data</a>
+          <a href="https://webjelinek.cz/timeline">Do you prefer more fun introducion?</a>
+        </div>
+        <p className="homepage-top-text">{userInfo.userName}, you will find my CV bellow.</p>
         {!isMobile && <p className="homepage-top-text">If you want, you can print it with the button on the bottom of the page.</p>}
          <CV userInfo={userInfo} cvItems={cvItems} liftColor={liftColor}/> 
         </>}
@@ -97,6 +110,7 @@ useEffect(() => {
           {!isMobile ? <>Download CV to print</> : <>If you want to download the CV, please open the site on desktop</>}
         </div>         
       </div>
+      </>
     );
 };
 

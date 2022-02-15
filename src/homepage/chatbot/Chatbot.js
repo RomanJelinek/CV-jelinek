@@ -5,7 +5,7 @@ const Chatbot = (props) => {
   const answers = [
     {
       message: () => {
-        return `I am glad you are here! My name is Roman and I am ${myAge}. Yeah I know what you are thinking. I could have learnt to code when I was younger but hey, I had no idea it is such a fun so better later than never. So now when you know who I am, what is your name?`;
+        return `Okay, I am so glad you are here! As I said my name is Roman and I am ${myAge}. Yeah I know what you are probably thinking. I could have started coding at lower age but hey ...  I had no idea it is such a fun so better later than never. Now, when you know my name, what's yours?`;
       },
       branch: "hire",
       step: 1,
@@ -23,7 +23,7 @@ const Chatbot = (props) => {
     },
     {
       message:
-        "Alright! The CV is almost ready. Bellow you will find your chosen parts of the CV and also your last interaction. Woud you like to generate CV also for print?",
+        "Alright! Before I generate the CV, check if you chose all parts you wanted. Bellow you will find your chosen parts of the CV",
       branch: "hire",
       step: 3,
       buttonText1: "I want to adjust CV sections",
@@ -48,10 +48,10 @@ const Chatbot = (props) => {
   const messages = [""];
 
   const [textToShow, setTextToShow] = useState(
-    "Welcome to my website! I am Roman. Let's find out why you are here. You are either just curious random internet user which is totally fine. OR! You are looking for someone to hire as a React developer and then it is totally great!"
+    "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer ( junior ). In the following steps you will be generating the CV which I am going to try make as organized as possible. Let's set it up!"
   );
-  const [buttonText1, setButtonText1] = useState("I am just looking around");
-  const [buttonText2, setButtonText2] = useState("Let's set up CV!");
+  const [buttonText1, setButtonText1] = useState("I want to make a website");
+  const [buttonText2, setButtonText2] = useState("Continue");
   const [userName, setUserName] = useState("");
   const [nameAlert, setNameAlert] = useState(false)
   const [currentBranch, setCurrentBranch] = useState("");
@@ -102,15 +102,17 @@ const Chatbot = (props) => {
     //////
 
     // finding the right object and setting states
-      const findMessage = () => {
+      const findMessage = (isLast) => {
         const ans = answers.find(
-        ({ branch, step }) => setBranch === branch && currentLevel === step
+        ({ branch, step }) => setBranch === branch && (isLast ? currentLevel - 2 === step  : currentLevel === step ) 
       ) 
+      console.log(ans)
         setTextToShow(ans.message);
         setCurrentBranch(setBranch);
         setButtonText1(ans.buttonText1);
         setButtonText2(ans.buttonText2);
-        setCurrentLevel(currentLevel + 1)
+        setCurrentLevel(isLast ? currentLevel - 1 : currentLevel + 1)
+        isLast && setCheckBoxes(checkBoxValues);
     }
    ///////
 
@@ -121,29 +123,33 @@ const Chatbot = (props) => {
     /////////////
     else {
       setNameAlert(false);
-
-
       // last step - transfer data to the local storage and lifting states up
-      if (currentLevel === 4) {
+      if (currentLevel === 4 && buttonId === "answer2") {
         let checkedBoxes = [];
-        checkBoxes.map((box) => {   // pulling IDs of checked boxes (CV items)
+        checkBoxes.map((box) => {
+          // pulling IDs of checked boxes (CV items)
           box.isChecked && checkedBoxes.push(box.id);
         });
 
-        const dataToSend = {    // preparing variable for local stoage
+        const dataToSend = {
+          // preparing variable for local stoage
           userName: userName,
           userType: currentBranch,
           company: companyName,
           itemsToShow: checkedBoxes,
-          cvToPrint: buttonId === "answer1" ? true : false
+          cvToPrint: buttonId === "answer1" ? true : false,
         };
 
-        window.localStorage.setItem("userData", JSON.stringify(dataToSend)); // sending all needed data to local storage 
-        props.liftData(false) // updating state in order to close this element 
+        window.localStorage.setItem("userData", JSON.stringify(dataToSend)); // sending all needed data to local storage
+        props.liftData(false); // updating state in order to close this element
       }
-      //////////
 
-      findMessage();
+      //////////
+      else {
+        let isLast = currentLevel === 4 ? true : false
+        findMessage(isLast)
+      }
+      
     }
   }
 
@@ -165,6 +171,8 @@ const Chatbot = (props) => {
     setCheckBoxes(arrayCopy)
    }
    ///////
+
+   console.log(currentLevel)
 
   return (
     <div className="chatbot-container">

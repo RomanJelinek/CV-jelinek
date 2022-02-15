@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .homepage {
     background: linear-gradient(45deg, rgb(156, 14, 156), midnightblue);
     padding-top: 40px;
     width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 
 .homepage-top-text {
@@ -29,6 +31,23 @@ font-family: 'Lato', sans-serif;
     cursor: pointer;
     text-align: center;
     font-size: 1.3em;
+}
+
+.top-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.top-links a {
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 
