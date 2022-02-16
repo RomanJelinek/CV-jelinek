@@ -5,7 +5,7 @@ const Chatbot = (props) => {
   const answers = [
     {
       message: () => {
-        return `Okay, I am so glad you are here! As I said my name is Roman and I am ${myAge}. Yeah I know what you are probably thinking. I could have started coding at lower age but hey ...  I had no idea it is such a fun so better later than never. Now, when you know my name, what's yours?`;
+        return `Okay, I am so glad you are here! As I said my name is Roman and I am ${myAge}. Yeah I know what you are probably thinking. I could have started coding at a lower age but hey ...  I had no idea it is so much fun so better later than never. Now, when you know my name, what's yours?`;
       },
       branch: "hire",
       step: 1,
@@ -14,7 +14,7 @@ const Chatbot = (props) => {
     },
     {
       message: () => {
-        return `Nice to meet you ${userName}! I am going to prepare a CV, please let me know what I should include there.`;
+        return `Nice to meet you ${userName}! I am going to prepare my CV, please let me know what I should include.`;
       },
       branch: "hire",
       step: 2,
@@ -23,7 +23,7 @@ const Chatbot = (props) => {
     },
     {
       message:
-        "Alright! Before I generate the CV, check if you chose all parts you wanted. Bellow you will find your chosen parts of the CV",
+        "Alright! Before I generate the CV, please check if you have chosen all the sections you wanted. Bellow you will find your chosen parts of the CV.",
       branch: "hire",
       step: 3,
       buttonText1: "I want to adjust CV sections",
@@ -49,7 +49,7 @@ const Chatbot = (props) => {
   
 
   const [textToShow, setTextToShow] = useState(
-    "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer ( junior ). In the following steps you will generate a CV. Let's set it up!"
+    "Welcome to my website which was made for the one main purpose. I am Roman and I am looking for a job as a React developer (junior). In the following steps you will generate my CV. Let's set it up!"
   );
   const [buttonText1, setButtonText1] = useState("I want to make a website");
   const [buttonText2, setButtonText2] = useState("Continue");

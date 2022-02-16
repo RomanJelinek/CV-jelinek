@@ -7,7 +7,7 @@ const CvEducation = (props) => {
             <h3>SPŠ a VOŠ Písek</h3>
             <p>IT and Electrical engineering - Completed by graduation exam </p>
             <h3>VŠTE Budweis</h3>
-            <p>Economic and management - Completed by bachelor degree</p>
+            <p>Economics and management - Completed by bachelor's degree</p>
       </div>
     );
 };

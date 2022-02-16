@@ -47,12 +47,11 @@ const CvMainText = (props) => {
         <div className="cv-main-story">
           <p>
             Hi I am Roman and I am about to become a web developer. Since I
-            burned all bridges, there are no other options for me (which was the
-            purpose).
+            have burned all bridges, there are no other options for me (which was meant so).
           </p>
           <p>
           I used to work as an online marketing specialist for about 5 years. But over
-          time I realized it is not something I want to in the future. So I founded a
+          time I realized it is not something I want to do in the future. So I founded a
           company with my former colleagues.
           </p>
           <p>

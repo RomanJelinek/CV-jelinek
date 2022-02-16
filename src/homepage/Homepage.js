@@ -98,7 +98,7 @@ const Homepage = () => {
             <div className="top-links">
               <a onClick={resetDataHandler}>Reset CV data</a>
               <a href="https://webjelinek.cz/timeline">
-                Do you prefer more fun introducion?
+                Do you prefer a playful introducion?
               </a>
             </div>
             <p className="homepage-top-text">
