@@ -34,7 +34,7 @@ const CvExperience = (props) => {
         company closes and when it opens again depending on the time, day of the
         week or a public holiday. For the public holiday check I fetch data from
         API. I also made a copy of this website for the branch company
-        Stkmilevsko.cz
+        Stkmilevsko.cz.
       </p>
       <h3>Webjelinek.cz</h3>
       <a href="https://github.com/RomanJelinek/CV-jelinek">
