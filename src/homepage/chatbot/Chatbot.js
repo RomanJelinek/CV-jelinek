@@ -107,7 +107,6 @@ const Chatbot = (props) => {
         const ans = answers.find(
         ({ branch, step }) => setBranch === branch && (isLast ? currentLevel - 2 === step  : currentLevel === step ) 
       ) 
-      console.log(ans)
         setTextToShow(ans.message);
         setCurrentBranch(setBranch);
         setButtonText1(ans.buttonText1);
@@ -173,7 +172,6 @@ const Chatbot = (props) => {
    }
    ///////
 
-   console.log(currentLevel)
 
   return (
     <div className="chatbot-container">
