@@ -1,7 +1,6 @@
 
 import Game from "./components/Game"
 import Homepage from "./homepage/Homepage"
-import Navbar from "./navbar/Navbar"
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
 function App() {
