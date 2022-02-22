@@ -72,7 +72,7 @@ const Chatbot = (props) => {
   }, []);
   useEffect(() => {
     if (companyName) {
-    setTextToShow(`Welcome to my website! Anyone from the ${companyName} company is always welcome here. I am going to try to make my CV as organized as possible. Let's set it up!` )
+    setTextToShow(`Welcome to my website! Anyone from the ${companyName} is always welcome here. I am going to try to make my CV as organized as possible. Let's set it up!` )
     }
   },[companyName])
   ///////
