@@ -56,7 +56,7 @@ const Chatbot = ({ setShowChatbot, liftData }) => {
     <div className="chatbot-container">
       <div className="chatbot-text-to-show">
         Welcome to my website.{' '}
-        {companyName && `Anyne from ${companyName} is always welcome here. `}
+        {companyName && `Anyone from ${companyName} is always welcome here. `}
         I&nbsp;am Roman, and I&nbsp;am looking for a&nbsp;job as
         a&nbsp;Front-end developer. Please choose the sections of the CV you are
         interested in, and I&nbsp;will generate a&nbsp;customized CV for you.
