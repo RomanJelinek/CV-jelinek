@@ -5,11 +5,9 @@ import CV from "./cv/CV"
 import html2canvas from "html2canvas";
 
 const Homepage = () => {
-  const [printVersion, setPrintVersion] = useState(true);
   const [cvItems, setCvItems] = useState([]);
   const [showChatbot, setShowChatbot] = useState(true);
   const [userInfo, setUserInfo] = useState([]);
-  const [cvColor, setCvColor] = useState([]);
   const [isMobile, setIsMobile] = useState(false);
 
   //choose the screen size
@@ -41,13 +39,10 @@ const Homepage = () => {
       setUserInfo(userObject);
     }
   }, [showChatbot]); // I am setting this state in the Chatbot.js component
+  console.log(showChatbot)
 
   const liftData = (data) => {
     setShowChatbot(data);
-  };
-
-  const liftColor = (color) => {
-    setCvColor(color);
   };
 
   const resetDataHandler = () => {
@@ -92,34 +87,31 @@ const Homepage = () => {
   return (
     <>
       <div className="homepage">
-        {showChatbot && <Chatbot liftData={liftData} />}
+        {showChatbot && (
+          <Chatbot liftData={liftData} setShowChatbot={setShowChatbot} />
+        )}
         {!showChatbot && (
           <>
             <div className="top-links">
               <a onClick={resetDataHandler}>Reset CV data</a>
-              <a href="https://webjelinek.cz/timeline">
-                Do you prefer a playful introducion?
-              </a>
+              <a href="/timeline">Do you prefer a playful introducion?</a>
             </div>
-            <p className="homepage-top-text">
-              {userInfo.userName}, you will find my CV bellow.
-            </p>
+            <p className="homepage-top-text">You will find my CV bellow.</p>
             {!isMobile && (
               <p className="homepage-top-text">
                 If you want, you can print it with the button on the bottom of
                 the page.
               </p>
             )}
-            <CV userInfo={userInfo} cvItems={cvItems} liftColor={liftColor} />
+            <CV userInfo={userInfo} cvItems={cvItems} />
           </>
         )}
         <div
           id="download-cv"
           style={{
-            backgroundColor:
-              cvColor.length === 0 || cvColor === "white" ? "black" : cvColor,
-            color: "white",
-            visibility: !showChatbot ? "visible" : "hidden",
+            backgroundColor: '#FFD700',
+            color: 'black',
+            visibility: !showChatbot ? 'visible' : 'hidden',
           }}
         >
           {!isMobile ? (

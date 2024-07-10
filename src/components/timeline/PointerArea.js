@@ -92,7 +92,7 @@ const PointerArea = (props) => {
         {events[4] === pointer && (
           <TextLeft
             text={
-              "Po vstřebání Vanilla JS jsem se rozhodl, směřovat svou pozornost na React, ve kterém je naprogramována tato timeline :)"
+              "Aktuálně pracuji jako front-end vývojář přes 2 roky a stále mě baví se vzdělávat a neustále se posouvat v tomto oboru."
             }
           />
         )}

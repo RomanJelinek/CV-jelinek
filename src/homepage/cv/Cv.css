@@ -57,8 +57,8 @@
 
 .cv-right-container h2 {
  text-align: center;
- font-size: 4.55vMin;
- margin: 2.6vMin 0 2.6vMin 0;
+ font-size: 4vMin;
+ margin: 4vMin 0 1.2vMin 0;
 }
 
 .cv-right-container h3 {
@@ -77,7 +77,7 @@
 
 .cv-right-container p {
  text-align: justify;
- font-size: 2.3vMin;
+ font-size: 2.2vMin;
  margin: 1.3vMin 5.2vMin 2.6vMin 2.6vMin;
 }
 
@@ -146,7 +146,7 @@
     text-align: justify;
     margin: 2.6vMin;
     line-height: 3.12vMin;
-    font-size: 2.47vMin;
+    font-size: 2.1vMin;
 }
 
 
@@ -197,8 +197,8 @@
 
 .cv-right-container h2 {
  text-align: center;
- font-size: 3.5vMin;
- margin: 2vMin 0 2vMin 0;
+ font-size: 3vMin;
+ margin: 1vMin 0 0.2vMin 0;
 }
 
 .cv-right-container h3 {
